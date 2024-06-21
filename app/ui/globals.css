@@ -1,0 +1,27 @@
+/* Check this video for info about this and tricks https://www.youtube.com/watch?v=kINNs4uYYnY */
+
+:root {
+    --bg: #151c2c;
+    --bgSoft: #182237;
+    --text: white;
+    --textSoft: #b7bac1;
+}
+
+/* universal selector */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Use inside app as default colors*/
+body {
+background-color: var(--bg);
+color: var(--text);
+}
+
+/* link default color and remove underline */
+a {
+color: inherit; /* inherit the color of the parent */
+text-decoration: none; /* remove underline */
+  }
