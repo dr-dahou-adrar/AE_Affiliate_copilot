@@ -2,13 +2,15 @@
 display: flex;
 }
 
+/* sidebar  */
 .menu {
 flex: 1;
-background-color: var(--bgSoft);
+background-color: var(--bgSoft); /* sidebar background */
 padding: 20px;
 min-height: 100vh;
 }
 
+/* navbar + content  */
 .content {
 flex: 4;
 padding: 20px;
