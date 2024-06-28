@@ -16,7 +16,7 @@ const UsersPage = () => {
 
             </div>
             <table className={styles.table}>
-                <head>
+                <thead>
                     <tr>
                         <td>Name</td>
                         <td>Email</td>
@@ -25,7 +25,7 @@ const UsersPage = () => {
                         <td>Status</td>
                         <td>Action</td>
                     </tr>
-                </head>
+                </thead>
                 <tbody>
                     <tr>
                         <td> 
@@ -45,10 +45,12 @@ const UsersPage = () => {
                         <td>Admin</td>
                         <td>Active</td>
                         <td>
-                            <Link href="/">
-                                <button className={`${styles.button} ${styles.view}`} > View </button>
-                            </Link>
-                            <button className={`${styles.button} ${styles.delete}`} > Delete </button>
+                            <div className={styles.buttons}>
+                                <Link href="/dashboard/users/test">
+                                    <button className={`${styles.button} ${styles.view}`} > View </button>
+                                </Link>
+                                <button className={`${styles.button} ${styles.delete}`} > Delete </button>
+                            </div>
 
                         </td>
                     </tr>
