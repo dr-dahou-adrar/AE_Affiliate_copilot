@@ -5,10 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { fetchUsers } from "@/app/lib/data";
 
-const UsersPage = async () => {
+const UsersPage = async ({searchParams}) => {
 
-    const users = await fetchUsers()
-    console.log(users)
+    const q = searchParams?.q || "";  
+    const page = searchParams?.page || 1;  //TODO: to always back to page 1 event if user is in page 2 or 3
+    const {count, users} = await fetchUsers(q, page)
+    // console.log(users)
 
 
     return ( 
@@ -64,7 +66,7 @@ const UsersPage = async () => {
                     ))}
                 </tbody>
             </table>
-            <Pagination/>
+            <Pagination count={count} />
         </div>
 
     );
